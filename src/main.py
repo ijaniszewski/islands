@@ -1,5 +1,3 @@
-"""The script to calculate the islands from the given matrix of 0s and 1s."""
-
 import argparse
 
 from calculate_islands import CalculateIslands
