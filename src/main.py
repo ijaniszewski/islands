@@ -27,7 +27,7 @@ class GetArgument:
     def from_file(self):
         input_file = self.get_argument()
         ci = CalculateIslands()
-        ci.create_whole_map(input_file)
+        ci.run(input_file)
 
 
 ga = GetArgument()
