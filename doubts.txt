@@ -1,0 +1,10 @@
+if the ones only touch diagonally if there is only one island or then we have two of them?
+
+i.e.:
+
+110
+001
+111
+
+do we have here one or two islands?
+
