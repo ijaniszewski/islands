@@ -1,5 +1,24 @@
-input_file_path = "examples/ex6.txt"
-input_file = open(input_file_path, "r") 
+import argparse
+
+def ext_check(expected_extension, openner):
+    def extension(filename):
+        if not filename.lower().endswith(expected_extension):
+            raise argparse.ArgumentTypeError("Only .txt files supported!")
+        return openner(filename)
+    return extension
+
+def get_argument():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '-f',
+        '--file',
+        help="Path to the txt input file.",
+        type=ext_check('.txt', argparse.FileType('r')),
+        required=True)
+    arg = parser.parse_args()
+    return arg.file
+
+input_file = get_argument()
 
 def print_whole_map(whole_map):
     for row in whole_map:
