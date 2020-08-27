@@ -1,4 +1,4 @@
-if the ones only touch diagonally if there is only one island or then we have two of them?
+if the ones only touch diagonally there is only one island or then we have two of them?
 
 i.e.:
 
